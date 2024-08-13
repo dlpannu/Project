@@ -1,0 +1,5 @@
+Info: Results will be stored at '/home/user5/devil_pannu/monteCarlo/Project/cudaAdvisor/e000/pp000/data.0'. See interactive HTML report in '/home/user5/devil_pannu/monteCarlo/Project/cudaAdvisor/e000/report'
+Info: Selected accelerator to analyze: Intel(R) XeLP Graphics Accelerator 96EU.
+Info: Baseline Host: Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz.
+Info: Binary Name: 'cuda_barrier_option_pricing'.
+Warning: Skip the unsupported instruction. Performance estimation may be inaccurate.

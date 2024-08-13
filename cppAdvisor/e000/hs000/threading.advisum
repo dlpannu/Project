@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <!DOCTYPE IntelParallelAdvisorSummaryCollection SYSTEM  "IntelParallelAdvisorSummaryCollection.dtd"> -->
+
+<IntelParallelAdvisorSummary version="" 
+                             kind="DATAKIND_SURVEY_EX" >
+  <hotspot filename=""
+           line_no="4294967295"
+           routine="monteCarloSimulation"
+           is_vectorized="0"
+           self_time="0.000000E+00"
+           total_time="7.780000E+00"
+           trip_counts=""
+           func_instance="5"
+           priority="0"/>
+  <hotspot filename=""
+           line_no="4294967295"
+           routine="monteCarloSimulation"
+           is_vectorized="0"
+           self_time="4.900029E-01"
+           total_time="7.769999E+00"
+           trip_counts=""
+           func_instance="3"
+           priority="0"/>
+  <hotspot filename=""
+           line_no="4294967295"
+           routine="std::normal_distribution&lt;float&gt;::operator()&lt;std::mersenne_twister_engine&lt;unsigned long, (unsigned long)32, (unsigned long)624, (unsigned long)397, (unsigned long)31, (unsigned long)2567483615, (unsigned long)11, (unsigned long)4294967295, (unsigned long)7, (unsigned long)2636928640, (unsigned long)15, (unsigned long)4022730752, (unsigned long)18, (unsigned long)1812433253&gt;&gt;"
+           is_vectorized="0"
+           self_time="7.299992E-01"
+           total_time="3.069952E+00"
+           trip_counts=""
+           func_instance="8"
+           priority="0"/>
+  <hotspot filename=""
+           line_no="4294967295"
+           routine="std::generate_canonical&lt;float, (unsigned long)24, std::mersenne_twister_engine&lt;unsigned long, (unsigned long)32, (unsigned long)624, (unsigned long)397, (unsigned long)31, (unsigned long)2567483615, (unsigned long)11, (unsigned long)4294967295, (unsigned long)7, (unsigned long)2636928640, (unsigned long)15, (unsigned long)4022730752, (unsigned long)18, (unsigned long)1812433253&gt;&gt;"
+           is_vectorized="0"
+           self_time="2.300021E-01"
+           total_time="1.489960E+00"
+           trip_counts=""
+           func_instance="12"
+           priority="0"/>
+  <hotspot filename=""
+           line_no="4294967295"
+           routine="std::mersenne_twister_engine&lt;unsigned long, (unsigned long)32, (unsigned long)624, (unsigned long)397, (unsigned long)31, (unsigned long)2567483615, (unsigned long)11, (unsigned long)4294967295, (unsigned long)7, (unsigned long)2636928640, (unsigned long)15, (unsigned long)4022730752, (unsigned long)18, (unsigned long)1812433253&gt;::_M_gen_rand"
+           is_vectorized="0"
+           self_time="5.600012E-01"
+           total_time="5.600012E-01"
+           trip_counts=""
+           func_instance="16"
+           priority="0"/>
+</IntelParallelAdvisorSummary >

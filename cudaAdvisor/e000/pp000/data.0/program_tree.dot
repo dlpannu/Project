@@ -1,0 +1,115 @@
+digraph G {
+
+		2 [label="\n _start\nNot Analyzed: Not a Loop", style=dotted]
+	2 -> 422
+		422 [label="\n __libc_start_main\nNot Analyzed: Not User Code", style=dotted]
+	422 -> 415
+		415 [label="\n main\nNot Analyzed: Not a Loop", style=dotted]
+	415 -> 270
+	415 -> 123
+	415 -> 5
+	415 -> 251
+	415 -> 223
+		223 [label="\n cudaDeviceSynchronize\nNot Analyzed: Not a Loop", style=dotted]
+	223 -> 224
+		224 [label="\n __cudart1041\nNot Analyzed: Not a Loop", style=dotted]
+	224 -> 225
+		225 [label="\n func@0x2b1fd0\nNot Analyzed: Not a Loop", style=dotted]
+	subgraph cluster_loopnest_268 {
+		graph [style=dotted];
+		268
+		label = "Region #37\nBase Time: 0.240238022, Percent Time: 9.458189842519687\nAcc Time: 0.009047265185185185, Non Acc Time: 0.0\nSpeedup: 26.553662027436488";
+	subgraph cluster_0_0 {
+		style=filled;
+		color=lightgrey;
+		node [style=filled, color=white];
+		268
+		268 [label="\n [loop in main]\nunrolls:21504"]
+		label = "offload #37\nBase Time: 0.240238022, Percent Time: 0.09458189842519686\nAcc Time: 0.009047265185185185, Non Acc Time: 0.0\nSpeedup: 26.553662027436488";
+	}
+
+	}
+	415 -> 268
+	subgraph cluster_loopnest_220 {
+		graph [style=dotted];
+		220
+		label = "Region #79\nBase Time: 0.2398955096, Percent Time: 9.444705102362207\nAcc Time: 0.009046966518518516, Non Acc Time: 0.0\nSpeedup: 26.516679276854894";
+	subgraph cluster_1_0 {
+		style=filled;
+		color=lightgrey;
+		node [style=filled, color=white];
+		220
+		220 [label="\n [loop in main]\nunrolls:21504"]
+		label = "offload #79\nBase Time: 0.2398955096, Percent Time: 0.09444705102362207\nAcc Time: 0.009046966518518516, Non Acc Time: 0.0\nSpeedup: 26.516679276854894";
+	}
+
+	}
+	415 -> 220
+		251 [label="\n cudaMemcpy\nNot Analyzed: Not a Loop", style=dotted]
+	251 -> 252
+		252 [label="\n __cudart615\nNot Analyzed: Not a Loop", style=dotted]
+	252 -> 253
+		253 [label="\n __cudart590\nNot Analyzed: Not a Loop", style=dotted]
+	253 -> 254
+		254 [label="\n func@0x3040b0\nNot Analyzed: Not a Loop", style=dotted]
+		5 [label="\n cudaMalloc<float>\nNot Analyzed: Not a Loop", style=dotted]
+	5 -> 44
+		44 [label="\n cudaMalloc\nNot Analyzed: Not a Loop", style=dotted]
+	44 -> 7
+	44 -> 45
+		45 [label="\n __cudart614\nNot Analyzed: Not a Loop", style=dotted]
+	45 -> 46
+		46 [label="\n __cudart949\nNot Analyzed: Not a Loop", style=dotted]
+	46 -> 47
+		47 [label="\n __cudart775\nNot Analyzed: Not a Loop", style=dotted]
+	47 -> 407
+		407 [label="\n __cudart770\nNot Analyzed: Not a Loop", style=dotted]
+	subgraph cluster_loopnest_48 {
+		graph [style=dotted];
+		48
+		label = "Region #105\nBase Time: 0.07071119790000001, Percent Time: 2.783905429133859\nAcc Time: 5.318518518518519e-06, Non Acc Time: 0.0\nSpeedup: 13295.280942200558";
+	subgraph cluster_2_0 {
+		style=filled;
+		color=lightgrey;
+		node [style=filled, color=white];
+		48
+		48 [label="\n [loop in __cudart770]\nunrolls:8"]
+		48 -> 49
+		49 [label="\n __cudart771\nNot Analyzed: ", style=dotted]
+		49 -> 50
+		50 [label="\n func@0x2ac870\nNot Analyzed: ", style=dotted]
+		label = "offload #105\nBase Time: 0.07071119790000001, Percent Time: 0.02783905429133859\nAcc Time: 5.318518518518519e-06, Non Acc Time: 0.0\nSpeedup: 13295.280942200558";
+	}
+
+	}
+	407 -> 48
+		7 [label="\n __cudart509\nNot Analyzed: Not a Loop", style=dotted]
+	7 -> 8
+		8 [label="\n __cudart1594\nNot Analyzed: Not a Loop", style=dotted]
+	8 -> 9
+		9 [label="\n __pthread_once_slow\nNot Analyzed: Not User Code", style=dotted]
+	9 -> 10
+		10 [label="\n __cudart1322\nNot Analyzed: Not a Loop", style=dotted]
+	10 -> 11
+		11 [label="\n __cudart511\nNot Analyzed: Not a Loop", style=dotted]
+	11 -> 12
+	11 -> 35
+		35 [label="\n func@0x2aa600\nNot Analyzed: Not a Loop", style=dotted]
+		12 [label="\n dlopen\nNot Analyzed: Not User Code", style=dotted]
+		123 [label="\n cudaMalloc<curandStateXORWOW>\nNot Analyzed: Not a Loop", style=dotted]
+	123 -> 124
+		124 [label="\n cudaMalloc\nNot Analyzed: Not a Loop", style=dotted]
+	124 -> 125
+		125 [label="\n __cudart614\nNot Analyzed: Not a Loop", style=dotted]
+	125 -> 126
+		126 [label="\n __cudart608\nNot Analyzed: Not a Loop", style=dotted]
+	126 -> 127
+		127 [label="\n func@0x2b9960\nNot Analyzed: Not a Loop", style=dotted]
+		270 [label="\n cudaFree\nNot Analyzed: Not a Loop", style=dotted]
+	270 -> 271
+		271 [label="\n __cudart490\nNot Analyzed: Not a Loop", style=dotted]
+	271 -> 272
+		272 [label="\n func@0x2ba4e0\nNot Analyzed: Not a Loop", style=dotted]
+	label="Intel Advisor, build 613505";
+
+}

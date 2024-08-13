@@ -1,0 +1,10 @@
+
+=== Start: [2024/08/13 08:53:24] === 
+Peak bandwidth measurement started...
+Peak bandwidth measurement finished.
+Analysis started...
+Result file: /home/user5/devil_pannu/monteCarlo/Project/cudaAdvisor/e000/trc000/trc000.advixe 
+Application exit code: 0 
+Result file: /home/user5/devil_pannu/monteCarlo/Project/cudaAdvisor/e000/trc000/trc000.advixe 
+Analysis completed
+=== End: [2024/08/13 08:54:20] === 
