@@ -37,7 +37,7 @@ if [! -f "$executable_file" ]; then
 fi
 
 # Create the VTune command
-vtune_cmd="vtune --collect=hotspot --result-dir=$project_dir/report./$executable_file"
+vtune_cmd="vtune --collect=hotspot --result-dir="$project_dir/report" -- $executable_file"
 
 # Run the VTune command
 echo "Running VTune command: $vtune_cmd"
