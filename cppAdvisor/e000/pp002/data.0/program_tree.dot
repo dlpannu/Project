@@ -1,0 +1,121 @@
+digraph G {
+
+		2 [label="\n _start\nNot Analyzed: Not a Loop", style=dotted]
+	2 -> 573
+		573 [label="\n __libc_start_main\nNot Analyzed: Not User Code", style=dotted]
+	573 -> 571
+		571 [label="\n main\nNot Analyzed: Not a Loop", style=dotted]
+	571 -> 664
+	571 -> 575
+		575 [label="\n monteCarloSimulation\nNot Analyzed: Not a Loop", style=dotted]
+	subgraph cluster_loopnest_576 {
+		graph [style=dotted];
+		576
+		label = "Region #229\nBase Time: 13.570000151099997, Percent Time: 99.92636341016198\nAcc Time: 4.677814000865345, Non Acc Time: 4.629974398999999\nSpeedup: 2.9009276872893395";
+	subgraph cluster_0_0 {
+		style=filled;
+		color=lightgrey;
+		node [style=filled, color=white];
+		576
+		576 [label="\n [loop in monteCarloSimulation]\nunrolls:14336"]
+		576 -> 6
+		6 [label="\n [loop in monteCarloSimulation]\nNot Analyzed: "]
+		6 -> 11
+		11 [label="\n normalRandom\nNot Analyzed: ", style=dotted]
+		11 -> 12
+		12 [label="\n std::normal_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, (unsigned long)32, (unsigned long)624, (unsigned long)397, (unsigned long)31, (unsigned long)2567483615, (unsigned long)11, (unsigned long)4294967295, (unsigned long)7, (unsigned long)2636928640, (unsigned long)15, (unsigned long)4022730752, (unsigned long)18, (unsigned long)1812433253>>\nNot Analyzed: ", style=dotted]
+		12 -> 580
+		580 [label="\n std::normal_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, (unsigned long)32, (unsigned long)624, (unsigned long)397, (unsigned long)31, (unsigned long)2567483615, (unsigned long)11, (unsigned long)4294967295, (unsigned long)7, (unsigned long)2636928640, (unsigned long)15, (unsigned long)4022730752, (unsigned long)18, (unsigned long)1812433253>>\nNot Analyzed: ", style=dotted]
+		580 -> 13
+		13 [label="\n [loop in std::normal_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, (unsigned long)32, (unsigned long)624, (unsigned long)397, (unsigned long)31, (unsigned long)2567483615, (unsigned long)11, (unsigned long)4294967295, (unsigned long)7, (unsigned long)2636928640, (unsigned long)15, (unsigned long)4022730752, (unsigned long)18, (unsigned long)1812433253>>]\nNot Analyzed: "]
+		13 -> 14
+		14 [label="\n std::__detail::_Adaptor<std::mersenne_twister_engine<unsigned long, (unsigned long)32, (unsigned long)624, (unsigned long)397, (unsigned long)31, (unsigned long)2567483615, (unsigned long)11, (unsigned long)4294967295, (unsigned long)7, (unsigned long)2636928640, (unsigned long)15, (unsigned long)4022730752, (unsigned long)18, (unsigned long)1812433253>, float>::operator()\nNot Analyzed: ", style=dotted]
+		14 -> 78
+		78 [label="\n std::generate_canonical<float, (unsigned long)24, std::mersenne_twister_engine<unsigned long, (unsigned long)32, (unsigned long)624, (unsigned long)397, (unsigned long)31, (unsigned long)2567483615, (unsigned long)11, (unsigned long)4294967295, (unsigned long)7, (unsigned long)2636928640, (unsigned long)15, (unsigned long)4022730752, (unsigned long)18, (unsigned long)1812433253>>\nNot Analyzed: ", style=dotted]
+		78 -> 15
+		15 [label="\n [loop in std::generate_canonical<float, (unsigned long)24, std::mersenne_twister_engine<unsigned long, (unsigned long)32, (unsigned long)624, (unsigned long)397, (unsigned long)31, (unsigned long)2567483615, (unsigned long)11, (unsigned long)4294967295, (unsigned long)7, (unsigned long)2636928640, (unsigned long)15, (unsigned long)4022730752, (unsigned long)18, (unsigned long)1812433253>>]\nNot Analyzed: "]
+		15 -> 562
+		562 [label="\n std::mersenne_twister_engine<unsigned long, (unsigned long)32, (unsigned long)624, (unsigned long)397, (unsigned long)31, (unsigned long)2567483615, (unsigned long)11, (unsigned long)4294967295, (unsigned long)7, (unsigned long)2636928640, (unsigned long)15, (unsigned long)4022730752, (unsigned long)18, (unsigned long)1812433253>::operator()\nNot Analyzed: ", style=dotted]
+		562 -> 585
+		585 [label="\n std::mersenne_twister_engine<unsigned long, (unsigned long)32, (unsigned long)624, (unsigned long)397, (unsigned long)31, (unsigned long)2567483615, (unsigned long)11, (unsigned long)4294967295, (unsigned long)7, (unsigned long)2636928640, (unsigned long)15, (unsigned long)4022730752, (unsigned long)18, (unsigned long)1812433253>::_M_gen_rand\nNot Analyzed: ", style=dotted]
+		585 -> 411
+		411 [label="\n [loop in std::mersenne_twister_engine<unsigned long, (unsigned long)32, (unsigned long)624, (unsigned long)397, (unsigned long)31, (unsigned long)2567483615, (unsigned long)11, (unsigned long)4294967295, (unsigned long)7, (unsigned long)2636928640, (unsigned long)15, (unsigned long)4022730752, (unsigned long)18, (unsigned long)1812433253>::_M_gen_rand]\nNot Analyzed: "]
+		585 -> 513
+		513 [label="\n [loop in std::mersenne_twister_engine<unsigned long, (unsigned long)32, (unsigned long)624, (unsigned long)397, (unsigned long)31, (unsigned long)2567483615, (unsigned long)11, (unsigned long)4294967295, (unsigned long)7, (unsigned long)2636928640, (unsigned long)15, (unsigned long)4022730752, (unsigned long)18, (unsigned long)1812433253>::_M_gen_rand]\nNot Analyzed: "]
+		562 -> 518
+		518 [label="\n _mcount\nNot Analyzed: ", style=dotted]
+		562 -> 511
+		511 [label="\n func@0x401730\nNot Analyzed: ", style=dotted]
+		15 -> 555
+		555 [label="\n std::mersenne_twister_engine<unsigned long, (unsigned long)32, (unsigned long)624, (unsigned long)397, (unsigned long)31, (unsigned long)2567483615, (unsigned long)11, (unsigned long)4294967295, (unsigned long)7, (unsigned long)2636928640, (unsigned long)15, (unsigned long)4022730752, (unsigned long)18, (unsigned long)1812433253>::min\nNot Analyzed: ", style=dotted]
+		555 -> 550
+		550 [label="\n _mcount\nNot Analyzed: ", style=dotted]
+		555 -> 295
+		295 [label="\n func@0x401730\nNot Analyzed: ", style=dotted]
+		78 -> 79
+		79 [label="\n _mcount\nNot Analyzed: ", style=dotted]
+		78 -> 180
+		180 [label="\n func@0x401730\nNot Analyzed: ", style=dotted]
+		14 -> 47
+		47 [label="\n _mcount\nNot Analyzed: ", style=dotted]
+		580 -> 21
+		21 [label="\n std::log\nNot Analyzed: ", style=dotted]
+		21 -> 540
+		540 [label="\n __logf_finite\nNot Analyzed: ", style=dotted]
+		21 -> 538
+		538 [label="\n _mcount\nNot Analyzed: ", style=dotted]
+		21 -> 399
+		399 [label="\n logf\nNot Analyzed: ", style=dotted]
+		580 -> 100
+		100 [label="\n std::normal_distribution<float>::param_type::mean\nNot Analyzed: ", style=dotted]
+		100 -> 554
+		554 [label="\n _mcount\nNot Analyzed: ", style=dotted]
+		100 -> 350
+		350 [label="\n func@0x401730\nNot Analyzed: ", style=dotted]
+		580 -> 68
+		68 [label="\n std::normal_distribution<float>::param_type::stddev\nNot Analyzed: ", style=dotted]
+		68 -> 69
+		69 [label="\n _mcount\nNot Analyzed: ", style=dotted]
+		68 -> 462
+		462 [label="\n func@0x401730\nNot Analyzed: ", style=dotted]
+		580 -> 58
+		58 [label="\n std::__detail::_Adaptor<std::mersenne_twister_engine<unsigned long, (unsigned long)32, (unsigned long)624, (unsigned long)397, (unsigned long)31, (unsigned long)2567483615, (unsigned long)11, (unsigned long)4294967295, (unsigned long)7, (unsigned long)2636928640, (unsigned long)15, (unsigned long)4022730752, (unsigned long)18, (unsigned long)1812433253>, float>::_Adaptor\nNot Analyzed: ", style=dotted]
+		58 -> 567
+		567 [label="\n _mcount\nNot Analyzed: ", style=dotted]
+		58 -> 163
+		163 [label="\n func@0x401730\nNot Analyzed: ", style=dotted]
+		580 -> 480
+		480 [label="\n _mcount\nNot Analyzed: ", style=dotted]
+		580 -> 191
+		191 [label="\n std::sqrt\nNot Analyzed: ", style=dotted]
+		191 -> 192
+		192 [label="\n _mcount\nNot Analyzed: ", style=dotted]
+		191 -> 338
+		338 [label="\n func@0x4018f0\nNot Analyzed: ", style=dotted]
+		191 -> 348
+		348 [label="\n sqrtf\nNot Analyzed: ", style=dotted]
+		12 -> 386
+		386 [label="\n _mcount\nNot Analyzed: ", style=dotted]
+		11 -> 155
+		155 [label="\n _mcount\nNot Analyzed: ", style=dotted]
+		6 -> 546
+		546 [label="\n exp\nNot Analyzed: ", style=dotted]
+		6 -> 457
+		457 [label="\n sqrt\nNot Analyzed: ", style=dotted]
+		6 -> 84
+		84 [label="\n func@0x401720\nNot Analyzed: ", style=dotted]
+		label = "offload #229\nBase Time: 13.570000151099997, Percent Time: 0.9992636341016199\nAcc Time: 4.677814000865345, Non Acc Time: 4.629974398999999\nSpeedup: 2.9009276872893395";
+	}
+
+	}
+	575 -> 576
+		664 [label="\n std::accumulate<__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float>>>, float>\nNot Analyzed: Not a Loop", style=dotted]
+	subgraph cluster_loopnest_572 {
+		graph [style=dotted];
+
+		572 [label="\n [loop in std::accumulate<__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float>>>, float>]\nNot Analyzed: "]
+	}
+	664 -> 572
+	label="Intel Advisor, build 613505";
+
+}
